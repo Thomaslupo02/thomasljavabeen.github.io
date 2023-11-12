@@ -1,0 +1,182 @@
+/* Puts a transparent box over the background image so text is easier to read  */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4); 
+  z-index: -1;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: url(../assets/javabackground.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+header{
+  margin-bottom:2em ;
+  padding: 0;
+  background-color: #491000;
+  color: #DFD9AB;
+  position: fixed;
+  width: 100%;
+  height: auto;
+ z-index: 4;
+}
+
+.footer{
+  position:fixed;
+  padding-bottom: 1em;
+  text-align: center;
+  bottom: 0;
+  background-color: #191312;
+  color: white;
+  width: 100%;
+  padding: 1em;
+}
+
+.h2{
+  font-family: 'Bitter', sans-serif;
+  font-weight: 700;
+  color: #DFD9AB;
+  margin-top: 5em;
+}
+
+.logo{
+  width: 10%;
+  height: auto;
+  display: inline-flex;
+  padding-left: .5em;
+}
+
+.container1{
+  margin-bottom: 9em;
+}
+
+
+/* Fade In Properties for Home Screen Text*/ 
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  margin: 3em;
+  margin-top: 5em;
+  font-family: 'Hind', sans-serif ;
+  font-weight: 600;
+  color: #DFD9AB;
+  background-color: rgba(126, 0, 0, .4);
+  box-sizing: border-box;
+  padding: .25em;
+  border-radius: .25em;
+
+}
+
+.fade-in-text.fade-in {
+  opacity: 1;
+}
+
+.learn-more-btn{
+  display: none;
+  background-color: #191312;
+  color: #DFD9AB;
+  border: #191312;
+  font-family: 'Hind', sans-serif;
+  font-weight: 400;
+}
+#resizable-button{
+  margin-bottom: 5em;
+}
+
+.learn-more-btn:hover{
+  background-color: #DFD9AB;
+  color: #191312;
+  border: #191312;
+}
+
+
+.menu-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 0;
+  color: #DFD9AB;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Initial position off-screen */
+  width: 250px;
+  height: 100%;
+  background: #191312;
+  transition: right 0.3s ease; /* Smooth transition */
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #DFD9AB;
+}             
+
+.menu.open {
+  right: 0; /* Slides the menu in */
+}
+
+
+.accordion{
+  margin-left: 33%;
+  margin-top: 3em;
+  width: 30em;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion-item {
+  border: 1px solid #ddd;
+  background-color: #491000;
+  color: #DFD9AB;
+  font-family: 'Bitter', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.accordion-header {
+  padding: 10px;
+  background-color: #491000;
+  cursor: pointer;
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px;
+}
+
+@media screen and (max-width: 1023px) {
+  .menu-button {
+    display: block; /* Show the button on tablets and phones */
+  }
+
+  .menu {
+    display: block; /* Show the menu on tablets and phones */
+  }
+}
