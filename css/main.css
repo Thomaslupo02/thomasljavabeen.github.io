@@ -1,0 +1,370 @@
+/* Puts a transparent box over the background image so text is easier to read  */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4); 
+  z-index: -1;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: url(../assets/javabackground.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+header{
+  margin-bottom: 3em;
+  padding: 0;
+  top: 0;
+  background-color: #491000;
+  color: #DFD9AB;
+  position: fixed;
+  width: 100%;
+  height: 100px; /* Set a specific height for the header, adjust as needed */
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.footer{
+  position:fixed;
+  padding-bottom: 1em;
+  text-align: center;
+  bottom: 0;
+  background-color: #191312;
+  color: white;
+  width: 100%;
+  padding: 1em;
+}
+
+.h2{
+  font-family: 'Bitter', sans-serif;
+  font-weight: 700;
+  color: #DFD9AB;
+  margin-top: 5em;
+}
+
+.coffee-cup{
+  margin-top: 8em;
+  width: 25em;
+  height: auto;
+}
+
+.card{
+  background-color: #491000;
+  margin-top: 2em;
+  margin-bottom: 5em;
+}
+
+.card-header{
+  font-family: 'Bitter', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: #DFD9AB;
+}
+
+.card-body{
+  font-family: 'Hind', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: #DFD9AB;
+}
+
+
+/* Contact Form CSS */
+.contact-text-center{
+  text-align: center;
+  padding-top: 1em;
+  font-family: 'Bitter', sans-serif;
+  font-weight: 400;
+  color: #DFD9AB;
+  font-size: xx-large;
+}
+
+.contactform{
+background-color: #883E24 ;
+font-family: 'Hind',sans-serif;
+font-weight: 400;
+color: #191312;
+}
+
+form {
+  max-width: 500px;
+  margin: 1em auto;
+  background-color: rgba(136, 62, 36, .6);
+  padding: 2em;
+  border: 1px solid #191312; 
+  border-radius: 2em;
+  color: #DFD9AB;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input[type="submit"] {
+  background-color: #191312;
+  color: #DFD9AB;
+  border-color: #191312;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #DFD9AB;
+  color:#191312;
+  border-color: #191312;
+
+}
+
+.error {
+  color: red;
+}
+
+textarea{
+  resize: both;
+  max-width: 400px;
+}
+
+
+.logo{
+  width: 25%;
+  height: auto;
+  display: block;
+  margin: 0 auto; 
+}
+
+.container1{
+  margin-bottom: 9em;
+}
+
+.container-contact{
+  padding-top: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-form{
+  padding-bottom: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2em;
+}
+
+
+h4{
+  font-family: 'Bitter', sans-serif;
+  font-weight: 700;
+  color: #DFD9AB;
+}
+
+h5{
+  font-family: 'Bitter', sans-serif;
+  font-weight: 700;
+  color: #DFD9AB;
+  margin-right: 5%;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.item-container{
+  background-color: rgba(73, 16, 0, .8);
+  border-radius: 1em;
+  padding: 1em;
+  margin-bottom: 5em;
+  margin-top: 7em;
+}
+
+.item-container img{
+  width: 300%;
+  height: auto;
+  max-width: 300%; 
+  border-radius: 8px;
+  display: block; 
+  margin: auto;
+}
+.item-container .col-10 {
+  width: 70%;
+  margin-left: 5%;
+  text-align: center;
+}
+
+.item-container p{
+  font-family: 'Hind',sans-serif;
+  font-weight: 400;
+  color: #DFD9AB;
+}
+
+.item-container .col-2 {
+  margin-left: 28% ;
+}
+
+
+/* Fade In Properties for Home Screen Text*/ 
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  margin: 3em;
+  margin-top: 5em;
+  font-family: 'Hind', sans-serif ;
+  font-weight: 600;
+  color: #DFD9AB;
+  background-color: rgba(73, 16, 0, .6);
+  box-sizing: border-box;
+  padding: .25em;
+  border-radius: .25em;
+
+}
+
+.fade-in-text.fade-in {
+  opacity: 1;
+}
+
+.learn-more-btn{
+  display: none;
+  background-color: #191312;
+  color: #DFD9AB;
+  border: #191312;
+  font-family: 'Hind', sans-serif;
+  font-weight: 400;
+}
+#resizable-button{
+  margin-bottom: 5em;
+}
+
+.learn-more-btn:hover{
+  color: #191312;
+  border: #191312;
+  background-color: #DFD9AB;
+}
+
+
+.menu-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 0;
+  color: #DFD9AB;
+}
+
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Initial position off-screen */
+  width: 250px;
+  height: 100%;
+  background: #191312;
+  transition: right 0.3s ease; /* Smooth transition */
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #DFD9AB;
+}             
+
+.menu.open {
+  right: 0; /* Slides the menu in */
+}
+
+
+.accordion{
+  margin-left: 33%;
+  margin-top: 3em;
+  width: 30em;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion-item {
+  border: 1px solid #ddd;
+  background-color: #491000;
+  color: #DFD9AB;
+  font-family: 'Bitter', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.accordion-header {
+  padding: 10px;
+  background-color: #491000;
+  cursor: pointer;
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px;
+}
+
+
+.products-container{
+  margin-top: 8em;
+  margin-bottom: 5em;
+  background-color: #491000;
+  border-radius: 2em;
+  padding: 1em;
+  border: 5px solid #191312;
+  align-self: center;
+  max-width: 450px ;
+}
+
+.products-container img{
+  max-width: 250px;
+  height: auto;
+}
+
+.products-container p{
+  color: #DFD9AB;
+  font-family: 'Hind', sans-serif;
+  font-weight: 400;
+}
+
+.buy-button{
+  background-color: #191312;
+  color: #DFD9AB;
+  border: #191312;
+  font-family: 'Hind', sans-serif;
+  font-weight: 400;
+}
+.buy-button:hover{
+  background-color: #DFD9AB;
+  color: #191312;
+  border: #191312;
+}
+
+
+@media screen and (max-width: 1023px) {
+  .menu-button {
+    display: block; /* Show the button on tablets and phones */
+  }
+
+  .menu {
+    display: block; /* Show the menu on tablets and phones */
+  }
+}
