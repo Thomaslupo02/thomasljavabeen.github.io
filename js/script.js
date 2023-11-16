@@ -61,7 +61,6 @@ $(document).ready(function(){
 
   // Adjust the button size based on the screen width
   var buttonSize = 2000/screenWidth 
-  // Set the button size dynamically
   $('#resizable-button').css('font-size', buttonSize + 'em');
     }
 
@@ -73,6 +72,66 @@ $(document).ready(function(){
       // Collapse other sections
       $('.accordion-content').not($(this).next('.accordion-content')).slideUp();
     });
+
+
+    //JavaScript Contact Us Form
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+      var message = document.getElementById("message").value;
+      var isValid = true;
+
+      // Simple validation
+      if (name === "") {
+        showError("Name is required");
+        isValid = false;
+      }
+
+      if (email === "") {
+        showError("Email is required");
+        isValid = false;
+      } else if (!isValidEmail(email)) {
+        showError("Invalid email address");
+        isValid = false;
+      }
+
+      if (phone === "") {
+        showError("Phone number is required");
+        isValid = false;
+      } else if (!isValidPhone(phone)) {
+        showError("Invalid phone number");
+        isValid = false;
+      }
+
+      if (message === "") {
+        showError("Message is required");
+        isValid = false;
+      }
+
+      if (!isValid) {
+        event.preventDefault(); // Prevent form submission if validation fails
+      }
+    });
+
+    function isValidEmail(email) {
+      // Simple email validation regex
+      var emailRegex = /\S+@\S+\.\S+/;
+      return emailRegex.test(email);
+    }
+
+    function isValidPhone(phone) {
+      // Simple phone number validation regex
+      var phoneRegex = /^\d{10}$/;
+      return phoneRegex.test(phone);
+    }
+
+    function showError(message) {
+      alert(message); // You can customize this to display errors differently
+    }
+    
+    $('#carousel1').carousel();
+    $('#carousel2').carousel();
 
 });
 
