@@ -263,9 +263,14 @@ h5{
   position: absolute;
   right: 20px;
   top: 20px;
-  z-index: 0;
+  z-index: 10;
   color: #DFD9AB;
 }
+
+nav a.active{
+  color: #fff;
+}
+
 
 
 .menu {
